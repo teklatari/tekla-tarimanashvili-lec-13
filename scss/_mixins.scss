@@ -1,0 +1,47 @@
+@mixin card{
+    .card-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .card {
+            background-color: #fafafa;
+            border-radius: 3px;
+            width: 400px;
+            overflow: hidden;
+        }
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin: 15px;
+            color: #111;
+        }
+
+        .card-content {
+            padding: 0 15px 15px;
+        }
+
+        .card-description {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .card-time {
+            font-size: 0.85rem;
+            color: #999;
+        }
+    }
+}
+@mixin flexContainer($justify: center, $align: center){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
